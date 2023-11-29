@@ -7,6 +7,13 @@
 
 // ==== FUNCTION TO CREATE ACCOUNT ====
 
+// HELENA: 
+// Spara personen ngnstans - json server.
+// -- Specifika sätt för register samt login. (Group project resourses)
+// -- Koden ska finnas på github - sundsgården (all source code).
+// Registrera funktionen.
+// Funkar Login?
+
 // Store "create acount" data in an object.
 // The stored account data should be able to be displayed on the Profile page.
 
