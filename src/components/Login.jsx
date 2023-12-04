@@ -34,7 +34,7 @@ const Login = () => {
         <> 
             {error && <ErrorLogin message={error} />}
             <form onSubmit={(handleSubmit)}> 
-                <label htmlFor="userName">UserName</label>
+                <labelgit pul htmlFor="userName">UserName</label>
                 <input value={username}  type="text" placeholder="UserName" id="userName" name="userName" onChange={(e) => setUsername(e.target.value)} /> 
                 <label htmlFor="password">password</label> 
                 <input value={password} type="password" placeholder="****" id="password" name="password" onChange={(e) => setPassword(e.target.value)} />
