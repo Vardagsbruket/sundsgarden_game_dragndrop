@@ -5,7 +5,8 @@ import { ProfilePage } from "../pages/ProfilePage";
 import { ErrorLogin } from "../components/ErrorLogin";
 import { AboutPage } from "../pages/AboutPage";
 import Login from "../components/Login";
-import Register from "../components/RegisterAccount";
+//import Register from "../components/RegisterAccount";
+import { Register } from "../components/RegisterAccount";
 
 const routes = (
   <Routes>
