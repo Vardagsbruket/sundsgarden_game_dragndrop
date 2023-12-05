@@ -8,7 +8,7 @@ import ErrorLogin  from "./components/ErrorLogin";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import routes from "./routes/routes";
-import { Register } from "./components/RegisterAccount";
+import { Register } from "./components/Register";
 
 function App() {
   return (
