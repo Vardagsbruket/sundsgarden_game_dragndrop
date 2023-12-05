@@ -1,5 +1,27 @@
-// import React from "react";
+import React from "react";
+import { Elementone } from "../components/Elements/Elementone";
+import { Elementtwo } from "../components/Elements/Elementtwo";
+import { Elementthree } from "../components/Elements/Elementthree";
+import { Elementfour } from "../components/Elements/Elementfour";
+import { Elementfive } from "../components/Elements/Elementfive";
+import { Elementsix } from "../components/Elements/Elementsix";
+import { Elementseven } from "../components/Elements/Elementseven";
+import { DropArea } from "../components/DropArea";
+
 
 export const GamePage = () => {
-  return <div>GamePage</div>;
+  return <div>GamePage
+    <Elementone/>
+    <Elementtwo/>
+    <Elementthree/>
+    <Elementfour/>
+    <Elementfive/>
+    <Elementsix/>
+    <Elementseven/>
+    <DropArea/>
+  </div>;
 };
+
+
+
+
