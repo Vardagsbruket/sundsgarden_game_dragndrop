@@ -3,7 +3,8 @@ import { useState } from "react";
 //import axios from "axios";
 import { Card } from "./Card";
 import { useNavigate } from "react-router-dom";
-import "./Buttton.css";
+import { Button } from "./Button";
+import "./Register.css";
 // +++++ Added const navigate on this page after seeing the Login tutorial.
 // Imported useNavigate to RegisterAccount
 // Also imported RegisterAccount and added Route to app.jsx.
