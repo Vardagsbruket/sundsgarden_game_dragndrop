@@ -1,7 +1,6 @@
 // ==== REGISTER ACCOUNT ====
 import { useState } from "react";
-//import axios from "axios";
-import { Card } from "./Card";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button } from "./Button";
 import "./Register.css";
@@ -21,7 +20,7 @@ const Register = () => { // Three states - one for each input field
   };
 
   const handleSubmit = async () => { // Assign this to button
-    const user = await axios
+   /*  const user = await axios
       .get("/users")
       .then((res) => checkEmail(res.data, email));
 
@@ -32,13 +31,22 @@ const Register = () => { // Three states - one for each input field
       const user = { username, email, password };
       axios.post("/users", user).then(alert("User created!"));
       navigate("../ProfilePage");
-    }
+    } */
+    const user = { username, email, password };
+    axios
+        .post("http://localhost:6001/users", user)
+        .then(alert("User created!"));
+
+      setUser({
+        name: "",
+        email: "",
+        password: "",
+      });
   };
 
  
   return (
     <div className="container">
-      {/* <Card> */}
       <form className="form-container">
         <h1>Register User</h1>
         <label>
@@ -69,7 +77,6 @@ const Register = () => { // Three states - one for each input field
           <p>Register Account</p>
         </button> 
       </form>
-      {/* </Card> */} 
     </div>
   );
 };
