@@ -23,6 +23,12 @@
       "email": "bibbi@gmail.com",
       "password": "1234",
       "id": 4
+    },
+    {
+      "username": "baba",
+      "email": "baba@gmail.com",
+      "password": "1234",
+      "id": 5
     }
   ]
 }
