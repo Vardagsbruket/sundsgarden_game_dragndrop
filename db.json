@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "username": "maria",
+      "email": "bla@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "username": "mimmi",
+      "email": "mimmi@gmai.com",
+      "password": "5678",
+      "id": 2
+    },
+    {
+      "username": "bobo",
+      "email": "bo@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "username": "bibbi",
+      "email": "bibbi@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "username": "baba",
+      "email": "baba@gmail.com",
+      "password": "1234",
+      "id": 5
+    }
+  ]
+}
