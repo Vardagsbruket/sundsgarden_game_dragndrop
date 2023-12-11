@@ -1,6 +1,7 @@
 // ==== REGISTER ACCOUNT ====
 import { useState } from "react";
 import axios from "axios";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button } from "./Button";
 import "./Register.css";
