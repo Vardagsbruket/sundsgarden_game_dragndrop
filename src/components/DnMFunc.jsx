@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 import { DndContext } from "@dnd-kit/core";
 
 import Draggable from "./Draggable";
@@ -13,9 +12,7 @@ import { Elementsix } from "./Elements/Elementsix";
 import { Elementseven } from "./Elements/Elementseven";
 
 export const DnMFunc = () => {
-
   return (
-
     <DndContext>
       <div style={{display: "flex",
                   justifyContent: "space-evenly"}}>
@@ -28,7 +25,6 @@ export const DnMFunc = () => {
       <Elementseven />
       </div>
     </DndContext>
-
   );
 };
 
