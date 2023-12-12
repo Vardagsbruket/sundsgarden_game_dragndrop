@@ -35,6 +35,12 @@
       "email": "diana.unden@gmail.com",
       "password": "hejsan",
       "id": 6
+    },
+    {
+      "username": "Sasz",
+      "email": "saskiavanderzanden@gmail.com",
+      "password": "xoxo",
+      "id": 7
     }
   ]
 }

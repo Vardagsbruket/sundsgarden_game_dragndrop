@@ -1,5 +1,42 @@
 import React, { useState, useEffect } from 'react';
+import Login from './Login';
+import { Welcome } from './Welcome';
 import axios from 'axios';
+
+
+export const LoginState = () => {
+  const [isLoggedIn, setIsLOggedIn] = useState(false);
+  const [loggedInUsername, setLoggedInUsername] = useState('');
+
+  const handleLogin = (username) => {
+    setIsLOggedIn(true);
+    setLoggedInUsername(username);
+  }
+
+  return (
+    <div>
+      {isLoggedIn ? (
+        <Welcome username={loggedInUsername} />
+      ) : (
+        <Login onLogin ={handleLogin} />
+      )}
+    </div>
+  );
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const ProfileDetails = () => {
   const [users, setUsers] = useState ([]);
@@ -14,15 +51,14 @@ export const ProfileDetails = () => {
 
   return (
   <div>
-    <h1>User List</h1>
-    <ul>
+    
       {users.map(user => (
-        <li key={user.id}>
+        <p key={user.id}>
           <strong>Username:</strong> {user.username}<br />
-          <strong>Email:</strong> {user.email}
-        </li>
+        </p>
       ))}
-    </ul>
+   
   </div>
   );
 };
+
