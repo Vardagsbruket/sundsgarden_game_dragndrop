@@ -4,7 +4,7 @@ import axios from 'axios';
 export const ProfileDetails = () => {
   const [users, setUsers] = useState ([]);
   useEffect(() => {
-    axios.get ('json server url')
+    axios.get ('http://localhost:6001/users')
     .then(response=> {
       setUsers(response.data);
     })
