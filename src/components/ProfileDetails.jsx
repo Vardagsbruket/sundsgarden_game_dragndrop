@@ -11,6 +11,18 @@ export const ProfileDetails = () => {
     .catch(error => { console.error('Oops, there is a problem fetching data:', error);
   });
   }, []);
-  
-  return <div></div>;
+
+  return (
+  <div>
+    <h1>User List</h1>
+    <ul>
+      {users.map(user => (
+        <li key={user.id}>
+          <strong>Username:</strong> {user.username}<br />
+          <strong>Email:</strong> {user.email}
+        </li>
+      ))}
+    </ul>
+  </div>
+  );
 };
