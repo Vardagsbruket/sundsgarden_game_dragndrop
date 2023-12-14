@@ -28,16 +28,6 @@ export const LoginState = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
 export const ProfileDetails = () => {
   const [users, setUsers] = useState ([]);
   useEffect(() => {

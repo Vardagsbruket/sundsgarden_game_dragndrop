@@ -59,6 +59,7 @@ const Login = () => {
     navigate(`/game/${user.id}`); //  access to the user's game page after login
 
     localStorage.setItem("user", JSON.stringify(user.id));
+    localStorage.setItem("userName", JSON.stringify(user.username)); //I've put an extra line of code in here to catch the username/Saskia
 
     resetForm();
   };

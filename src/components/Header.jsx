@@ -4,6 +4,9 @@ import { LogOutButton } from "./LogOutButton";
 import ProfilePhoto from "../components/Images/ProfilePhoto.png";
 
 export const Header = () => {
+const userName = JSON.parse(localStorage.getItem("userName"))//get username from local storage, without the quotes
+console.log(userName); //check if it works
+
   return (
     <div className="header">
       <div>
@@ -20,6 +23,7 @@ export const Header = () => {
         </NavLink>
         <NavLink to="/profile/:userId">
           <img src={ProfilePhoto} alt="Profile Picture" />
+          <p>{userName}</p>
         </NavLink>
       </div>
     </div>
