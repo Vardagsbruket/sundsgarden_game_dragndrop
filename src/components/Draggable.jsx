@@ -5,11 +5,16 @@ export const Draggable = ({ children, id }) => {
     id: id,
   });
 
-  const style = transform
-    ? {
+    const {attributes, listeners, setNodeRef, transform} = useDraggable({
+        id: 'draggable',
+    });
+
+    const style = transform ? {
         transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-      }
-    : undefined;
+    } : undefined;
+
+    return (
+    <div ref={setNodeRef} style={style} {...listeners} {...attributes}>
 
   return (
     <div ref={setNodeRef} style={style} {...listeners} {...attributes}>
@@ -17,3 +22,11 @@ export const Draggable = ({ children, id }) => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
+    </div>
+    );
+}
+
+export default Draggable;
+>>>>>>> 5c29019c2fa3e62f2cba0f79542427808e44fe8d

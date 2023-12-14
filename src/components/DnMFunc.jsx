@@ -1,5 +1,15 @@
 import { DndContext } from "@dnd-kit/core";
+<<<<<<< HEAD
 import { useState } from "react";
+=======
+
+import { useState } from "react";
+
+
+import Draggable from "./Draggable";
+import Droppable from "./Droppable";
+
+>>>>>>> 5c29019c2fa3e62f2cba0f79542427808e44fe8d
 import { Elementone } from "./Elements/Elementone";
 import { Elementtwo } from "./Elements/Elementtwo";
 import { Elementthree } from "./Elements/Elementthree";
