@@ -20,7 +20,7 @@ const Login = () => {
     if (user && user.email === email && user.password === password) {
       return user;
     } else {
-      navigate("/Login");
+      navigate("/login");
       return null;
     }
   };
@@ -92,14 +92,14 @@ const Login = () => {
       </form>
       <div className="Login-button-container">
         <button className="Login-button" onClick={handleSubmit}>
-          Log in
+          <p className="btn-p" >Log in</p>
         </button>
         <p className="Login-p">or</p>
         <button
           className="Login-button"
-          onClick={() => navigate("/create-account")}
+          onClick={() => navigate("/register-account")}
         >
-          Create Account
+          <p className="btn-p">Create Account</p>
         </button>
       </div>
     </>
