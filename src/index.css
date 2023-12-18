@@ -12,12 +12,12 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  font-weight: 600;
+  color:#8B8989;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #2463EB;
 }
 
 body {
@@ -37,18 +37,20 @@ button {
   font-family: Inter;
   font-weight: 400;
   font-size: 16px;
-  background-color:  #2463EB;;
+  line-height: 24px;
+  background-color:  #2463EB;
   color: white;
   border-radius: 12px;
   outline: 2px solid lightgray;
-  padding: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin: 1rem;
   cursor: pointer;
   transition: color 0.25s;
 }
 button:hover {
   outline: 2px solid lightgray;
-  background-color: #9CE5CA;
+  background-color: #EACFC4;
 }
 
 
@@ -58,7 +60,7 @@ button:hover {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #2463EB;
   }
   
 }

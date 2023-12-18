@@ -5,3 +5,19 @@
     color: #2463EB;
     margin: 50px;
 }
+
+
+
+.DisplayName {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #8B8989;
+}
+
+.DisplayEmail {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #8B8989;
+}

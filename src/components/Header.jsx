@@ -23,7 +23,7 @@ console.log(userName); //check if it works
         </NavLink>
         <NavLink to="/profile/:userId">
           <img src={ProfilePhoto} alt="Profile Picture" />
-          <p>{userName}</p>
+          <p className="userName">{userName}</p>
         </NavLink>
       </div>
     </div>
