@@ -6,7 +6,6 @@ export const ProfilePage = () => {
   return (
     <>
       <Welcome/>
-      <img className="ProfileContent" src={ProfileContent}/>
     </>
   );
 };
