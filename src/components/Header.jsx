@@ -18,9 +18,7 @@ console.log(userName); //check if it works
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/register-account">Create Account</NavLink>
         <NavLink to="/about">About</NavLink>
-        <NavLink to="/login">
-          <LogOutButton />
-        </NavLink>
+        <NavLink to="/login"><button className='btn'>Log Out</button></NavLink>
         <NavLink to="/profile/:userId">
           <img src={ProfilePhoto} alt="Profile Picture" />
           <p className="userName">{userName}</p>
