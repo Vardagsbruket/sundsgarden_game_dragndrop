@@ -11,25 +11,29 @@ export const ProfileDetails = () => {
 
   useEffect(() => {
     axios
-      .get("json server url")
+      .get("http://localhost:6001/users")
       .then((response) => {
-        setUsers(response.data.users);
+        console.log("Response.data", response.data);
+        const loggedInUser = response.data.find(
+          (userData) => userData.id === parseInt(userId)
+        );
+        setUsers(loggedInUser ? [loggedInUser] : []);
       })
       .catch((error) => {
         console.error("Oops, there is a problem fetching data:", error);
       });
-  }, []);
+  }, [userId]);
 
   return (
     <div>
       <h1>User List</h1>
       {users ? (
         <ul>
-          {users.map((user) => (
-            <li key={user.id}>
-              <strong>Username:</strong> {user.username}
+          {users.map((userData) => (
+            <li key={userData.id}>
+              <strong>Username:</strong> {userData.username}
               <br />
-              <strong>Email:</strong> {user.email}
+              <strong>Email:</strong> {userData.email}
             </li>
           ))}
         </ul>
