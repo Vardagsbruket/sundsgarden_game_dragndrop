@@ -20,7 +20,7 @@ console.log(userName); //check if it works
         <NavLink to="/register-account">Create Account</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/login">
-          <LogOutButton />
+        <NavLink to="/login"><button className='btn'>Log Out</button></NavLink>
         </NavLink>
         <NavLink to="/profile/:userId">
           <img src={ProfilePhoto} alt="Profile Picture" />
