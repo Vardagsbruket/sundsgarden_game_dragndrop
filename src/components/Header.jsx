@@ -1,6 +1,5 @@
 import { NavLink, useParams } from "react-router-dom";
 import "./Header.css";
-import { LogOutButton } from "./LogOutButton";
 import ProfilePhoto from "../components/Images/ProfilePhoto.png";
 import { useAuth } from "./AuthProvider";
 
