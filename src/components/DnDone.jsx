@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from 'react';
 import { useDrag } from '@use-gesture/react';
-import { Elementtwo } from "../components/Elements/Elementtwo";
+import { Elementone } from "../components/Elements/Elementone";
 
 
-export const GamePage2 = () => {
+export const DnDone = () => {
   const [elementPos, setElementPos] = useState({ x: 0, y: 0});
   const bindElementPos= useDrag((params) => {
 setElementPos({
@@ -20,9 +20,12 @@ y:params.offset[1],
         left: elementPos.x,
         touchAction: 'none',
       }}>
-         <Elementtwo/>
+         <Elementone/>
       </div>
+
+    
+   
   </div>
 )};
 
-export default GamePage2;
+export default DnDone;
