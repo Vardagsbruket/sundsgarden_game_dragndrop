@@ -22,7 +22,7 @@ console.log(userName); //check if it works
         <NavLink to="/login">
           <LogOutButton />
         </NavLink>
-        <NavLink to={`/profile/${userId}`}>
+        <NavLink to="/profile/:userId">
           <img src={ProfilePhoto} alt="Profile Picture" />
           <p className="userName">{userName}</p>
         </NavLink>
