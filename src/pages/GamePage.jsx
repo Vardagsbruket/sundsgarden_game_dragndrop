@@ -1,22 +1,33 @@
 import React from "react";
-import { DropArea } from "../components/DropArea";
-import Register from "../components/Register";
+import { useState } from 'react';
+import { useDrag } from '@use-gesture/react';
 import { Instructions } from "../components/Instructions";
-import { Elements } from "../components/Elements";
-import { DnMFunc } from "../components/DnMFunc";
-import { DnMFunc2 } from "../components/DnMFunc2"
+import { Elementone } from "../components/Elements/Elementone";
+
 
 export const GamePage = () => {
-  return (
-    <div style={{ marginTop: "25px" }}>
+  const [elementPos, setElementPos] = useState({ x: 0, y: 0});
+  const bindElementPos= useDrag((params) => {
+setElementPos({
+x:params.offset[0],
+y:params.offset[1],
+  });
+});
+  return ( 
+  <div style={{marginTop: "25px"}}>
+    <div {...bindElementPos()} style={{
+        position: 'relative',
+        top: elementPos.y,
+        left: elementPos.x,
+        touchAction: 'none',
+      }}>
+         
+         <Elementone/>
+      </div>
 
-      <Instructions />    
-      <DnMFunc />
-      <DnMFunc2 />
-
-
-    </div>
-  );
-};
+    <Instructions/>
+   
+  </div>
+)};
 
 export default GamePage;
