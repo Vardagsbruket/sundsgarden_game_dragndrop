@@ -11,6 +11,48 @@
       "email": "mimmi@gmai.com",
       "password": "5678",
       "id": 2
+    },
+    {
+      "username": "bobo",
+      "email": "bo@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "username": "bibbi",
+      "email": "bibbi@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "username": "baba",
+      "email": "baba@gmail.com",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "username": "Diana",
+      "email": "diana.unden@gmail.com",
+      "password": "hejsan",
+      "id": 6
+    },
+    {
+      "username": "Sasz",
+      "email": "saskiavanderzanden@gmail.com",
+      "password": "xoxo",
+      "id": 7
+    },
+    {
+      "username": "Loka",
+      "email": "loka@gmail.com",
+      "password": "loka",
+      "id": 9
+    },
+    {
+      "username": "Bar",
+      "email": "Bar@gmail.com",
+      "password": "BarBar",
+      "id": 10
     }
   ]
 }
