@@ -17,14 +17,9 @@ export const Header = () => {
         </NavLink>
       </div>
       <div className="navBar">
-        <NavLink to="/login">Login</NavLink>
-        <NavLink to="/register-account">Create Account</NavLink>
         <NavLink to="/about">About</NavLink>
-        <NavLink to="/login">
-          <NavLink to="/login">
-            <button className="btn">Log Out</button>
-          </NavLink>
-        </NavLink>
+        <NavLink to="/">Log Out</NavLink>
+        {/* Add function to log out */}
         <NavLink to={`/profile/${userId}`}>
           <img src={ProfilePhoto} alt="Profile Picture" />
           <p className="userName">{userName}</p>
