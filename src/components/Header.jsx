@@ -1,4 +1,4 @@
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, Navigate, useParams } from "react-router-dom";
 import "./Header.css";
 import ProfilePhoto from "../components/Images/ProfilePhoto.png";
 import { useAuth } from "./AuthProvider";
@@ -9,6 +9,16 @@ export const Header = () => {
   const userName = JSON.parse(localStorage.getItem("userName")); //get username from local storage, without the quotes
   console.log(userName); //check if it works
 
+  const handleLogOut = (user) => {
+    dispatchEvent({ type: "LOGOUT", payload: { user } });
+    alert(`Hi ${user.username}, you are now logged out`);
+    Navigate(`/`); //  access to the user's game page after login
+
+    localStorage.setItem("user", JSON.stringify(null));
+    localStorage.setItem("userName", JSON.stringify(null));
+    localStorage.setItem("userEmail", JSON.stringify(null));
+  };
+
   return (
     <div className="header">
       <div>
@@ -17,8 +27,11 @@ export const Header = () => {
         </NavLink>
       </div>
       <div className="navBar">
+        <NavLink to={`/game/${userId}`}>Play</NavLink>
         <NavLink to="/about">About</NavLink>
-        <NavLink to="/">Log Out</NavLink>
+        <NavLink to="/" onClick={handleLogOut}>
+          Log Out
+        </NavLink>
         {/* Add function to log out */}
         <NavLink to={`/profile/${userId}`}>
           <img src={ProfilePhoto} alt="Profile Picture" />

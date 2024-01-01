@@ -10,7 +10,7 @@ import Login from "../components/Login";
 
 const routes = (
   <Routes>
-    <Route path="/" element={<Login />} />
+    <Route path="/" element={<LoginAccountPage />} />
     <Route path="/game/:userId" element={<GamePage />} />
     <Route path="/profile/:userId" element={<ProfilePage />} />
     <Route path="/about" element={<AboutPage />} />

@@ -95,7 +95,7 @@ const Login = () => {
         </label>
       </form>
       <div className="Login-button-container">
-        <NavLink to="/login" className="button">
+        <NavLink to="/login" className="button" onClick={handleSubmit}>
           Login
         </NavLink>
         <p className="Login-p">or</p>
