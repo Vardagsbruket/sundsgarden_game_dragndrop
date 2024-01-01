@@ -1,9 +1,10 @@
-import { ProfileDetails } from "../components/ProfileDetails";
+import "./ProfilePage.css";
+import { Welcome } from "../components/Welcome";
 
 export const ProfilePage = () => {
   return (
     <>
-      <ProfileDetails />
+      <Welcome/>
     </>
   );
 };

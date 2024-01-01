@@ -1,15 +1,16 @@
 import { useState } from "react"; // uses the useState hook to add a variable to update the value.
-import { useNavigate } from "react-router-dom"; //to allow users to access different components
-import ErrorLogin from "./ErrorLogin";
+import { useNavigate, useParams } from "react-router-dom"; //to allow users to access different components
 import "./Login.css";
 import axios from "axios";
-// import Card from "./Card";
+import { useAuth } from "./AuthProvider";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(""); // to store and display any error messages
   const navigate = useNavigate();
+  const { dispatch } = useAuth();
+  const { userId } = useParams();
 
   const checkUser = (users) => {
     // Function to validate the user
@@ -17,77 +18,95 @@ const Login = () => {
       (user) => user.email === email && user.password === password
     );
     console.log(user);
-    if (user.email === email && user.password === password) return user;
+
+    if (user && user.email === email && user.password === password) {
+      return user;
+    } else {
+      navigate("/login");
+      return null;
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // prevent the default behavior of a form when it is submitted.
 
-    if (email === "" || password === "") {
-      // Ensure email and password are not empty. || equal or
-      alert("All fields are required!");
-      return;
-    }
-
     try {
-      // checking if the login credentials are valid
-      const response = await axios.get("/users");
+      //checking if the login credentials are valid
+      const response = await axios.get("http://localhost:6001/users");
       const user = checkUser(response.data);
 
-      if (user) {
+      if (email === "" || password === "") {
+        alert("All fields are required!");
+        resetForm();
+        return;
+      } else if (user) {
         successMessage(user);
       } else {
+        console.error(error);
         errorMessage("Invalid username or password. Please try again!");
       }
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
+  };
 
-    const successMessage = (user) => {
-      alert(`Hi ${user.username}`);
-      navigate(`/game/${user.id}`); //  access to the user's game page after login
+  const resetForm = () => {
+    // to do not repeat code
+    setEmail("");
+    setPassword("");
+  };
 
-      localStorage.setItem("user", JSON.stringify(user.id));
+  const successMessage = (user) => {
+    dispatch({ type: "LOGIN", payload: { user } });
+    alert(`Hi ${user.username}`);
+    navigate(`/game/${user.id}`); //  access to the user's game page after login
 
-      setEmail("");
-      setPassword("");
-    };
+    localStorage.setItem("user", JSON.stringify(user.id));
+    localStorage.setItem("userName", JSON.stringify(user.username)); //I've put an extra line of code in here to catch the username/Saskia
+    localStorage.setItem("userEmail", JSON.stringify(user.email)); //Same for the email adress
+    resetForm();
+  };
 
-    const errorMessage = (message) => {
-      setError(message); //save error message
-    };
+  const errorMessage = (message) => {
+    alert("Invalid username or password. Please try again!");
+    setError(message); //save error message
 
-    return (
-      <>
-        {error && <ErrorLogin message={error} />}
-        <form className="form-container" onSubmit={handleSubmit}>
-          <h1>Log in</h1>
-          <label>
-            <input
-              value={email}
-              type="text"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </label>
-          <label>
-            <input
-              value={password}
-              type="Password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
-        </form>
-        <div className="button-container">
-          <button onClick={handleSubmit}>Log in</button>
-          <p>or</p>
-          <button onClick={() => navigate("/RegisterAccountPage")}>
-            Create Account
-          </button>
-        </div>
-      </>
-    ); //onChange is used to listen for user input in a text input box., onFormSwitch to switch to other page
-  }; // Does our project require card functionality? We only have one user information that needs to be styled
+    resetForm();
+  };
+
+  return (
+    <>
+      <form className="form-container" onSubmit={handleSubmit}>
+        <label>
+          <input
+            value={email}
+            type="text"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
+        <label>
+          <input
+            value={password}
+            type="Password"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </label>
+      </form>
+      <div className="Login-button-container">
+        <button className="Login-button" onClick={handleSubmit}>
+          <p className="btn-p">Log in</p>
+        </button>
+        <p className="Login-p">or</p>
+        <button
+          className="Login-button"
+          onClick={() => navigate("/register-account")}
+        >
+          <p className="btn-p">Create Account</p>
+        </button>
+      </div>
+    </>
+  ); //onChange is used to listen for user input in a text input box., onFormSwitch to switch to other page
 };
 export default Login;
