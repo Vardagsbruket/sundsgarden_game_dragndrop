@@ -1,12 +1,14 @@
 import { NavLink, useParams } from "react-router-dom";
 import "./Header.css";
-import { LogOutButton } from "./LogOutButton";
 import ProfilePhoto from "../components/Images/ProfilePhoto.png";
 import { useAuth } from "./AuthProvider";
 
 export const Header = () => {
   const { state } = useAuth();
   const { userId } = state;
+  const userName = JSON.parse(localStorage.getItem("userName")); //get username from local storage, without the quotes
+  console.log(userName); //check if it works
+
   return (
     <div className="header">
       <div>
@@ -19,10 +21,13 @@ export const Header = () => {
         <NavLink to="/register-account">Create Account</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/login">
-          <LogOutButton />
+          <NavLink to="/login">
+            <button className="btn">Log Out</button>
+          </NavLink>
         </NavLink>
         <NavLink to={`/profile/${userId}`}>
           <img src={ProfilePhoto} alt="Profile Picture" />
+          <p className="userName">{userName}</p>
         </NavLink>
       </div>
     </div>
