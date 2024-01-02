@@ -30,7 +30,6 @@ export const ProfileDetails = () => {
 
   return (
     <div>
-      <h1>User List</h1>
       {users ? (
         <ul>
           {users.map((userData) => (
