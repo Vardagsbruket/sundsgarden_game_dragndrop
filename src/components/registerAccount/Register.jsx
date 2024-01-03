@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
 //  TODO:
-//  2. Add correct navigation to profile page - private route.
+//  1. Add correct navigation to profile page after register - private route.
+//  2. add error page??
   
 
 const Register = () => { 
@@ -37,7 +38,7 @@ const Register = () => {
 
           }
           catch (error) {
-            console.log(error);
+            console.log(error); // ==== DO I NEED TO ADD ANYTHING HERE? ===  
           }
         }
         else { 

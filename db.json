@@ -71,6 +71,12 @@
       "email": "Nadine@dawod.com",
       "password": "hejhopp",
       "id": 13
+    },
+    {
+      "username": "dada",
+      "email": "dada@gmail.com",
+      "password": "1234",
+      "id": 14
     }
   ]
 }
