@@ -1,9 +1,4 @@
 
-import React from "react";
-
-import {useDroppable} from "@dnd-kit/core";
-
-
 
 export const Droppable = () => {
 
@@ -13,7 +8,6 @@ export const Droppable = () => {
     return (
         <div ref={setNodeRef}></div>
     );
-};
 
 export default Droppable;
 

@@ -28,7 +28,6 @@ export const DnMFunc = () => {
       <Elementseven />
       </div>
     </DndContext>
-
   );
 };
 
