@@ -30,7 +30,6 @@ const Register = () => {
           if (user) {       // if - there is a matching user alert
             alert("Username or email already exists. Please try again!");
           } else {          // else - create newUser
-            console.log("i else satsen")
             const newUser = { username, email, password: password1 };
               axios.post("http://localhost:6001/users", newUser)  
               .then(() => alert("User created!"));                
@@ -50,7 +49,6 @@ const Register = () => {
   return (
     <div className="container">
       <form className="form-container">
-        <h1>Register User</h1>
         <label>
           <input
             type="text"
