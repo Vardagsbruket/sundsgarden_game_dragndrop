@@ -65,6 +65,12 @@
       "email": "vovo@gmail.com",
       "password": "1234",
       "id": 12
+    },
+    {
+      "username": "Nadine",
+      "email": "Nadine@dawod.com",
+      "password": "hejhopp",
+      "id": 13
     }
   ]
 }
