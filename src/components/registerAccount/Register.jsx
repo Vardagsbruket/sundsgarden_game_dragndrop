@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
 //  TODO:
-//  1. does the register function work with t he login function? I THINK SO, BUT CHECK AGAIN AFTER MERGE
-//  2. Add correct navigation iin register code.
+//  2. Add correct navigation to profile page - private route.
   
 
 const Register = () => { 
