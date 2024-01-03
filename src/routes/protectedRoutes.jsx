@@ -9,21 +9,19 @@ const ProtectedRoute = ({ element, ...rest }) => {
   const alertShownRef = useRef(false);
 
   useEffect(() => {
-    if (!state.isAuthenticated || !userId) {
-      if (!alertShownRef.current) {
+    if (!state.isAuthenticated || userId === undefined) {
+      // Show an alert only if it hasn't been shown before and userId is defined
+      if (!alertShownRef.current && userId !== undefined) {
         alert("You need to login to access this page");
         alertShownRef.current = true;
       }
-      // Redirect to login page if not authenticated or userId is undefined
+
+      // Redirect to login page
       navigate("/login", { replace: true });
     }
   }, [state.isAuthenticated, userId, navigate]);
 
-  return state.isAuthenticated ? (
-    <Route {...rest} element={element} />
-  ) : (
-    <Navigate to="/login" replace />
-  );
+  return state.isAuthenticated ? element : <Navigate to="/login" replace />;
 };
 
 export default ProtectedRoute;

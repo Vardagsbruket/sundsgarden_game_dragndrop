@@ -18,19 +18,11 @@ const routes = (
 
     <Route
       path="/game/:userId"
-      element={
-        <ProtectedRoute>
-          <GamePage />
-        </ProtectedRoute>
-      }
+      element={<ProtectedRoute element={<GamePage />} />}
     />
     <Route
       path="/profile/:userId"
-      element={
-        <ProtectedRoute>
-          <ProfilePage />
-        </ProtectedRoute>
-      }
+      element={<ProtectedRoute element={<ProfilePage />} />}
     />
     {/* Error page */}
     <Route path="*" element={<ErrorLogin />} />
