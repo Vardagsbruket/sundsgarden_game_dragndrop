@@ -1,17 +1,73 @@
-.form-container {
+.register-page-container {
+    min-height: 100vh;
+    width: 1440px;
+    max-width: 100%;
+    background-color: rgba(234, 207, 196, 0.89);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.registerImage{
+    margin-top: 30px;
+    height: 300px;
+    width:auto;
+    height: 80%;
+}
+
+/* .register-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+} */
 
-label {
-    text-align: center;
-}
+/* label {
+      text-align: left;
+} */
 
 .register-title {
-    color: #8B8989;
+    font-size: 40px;
+    font-weight: 400px;
+    line-height: 48px;
+    letter-spacing: 0.32em;
+    text-align: center;
+    margin-top: 195px;
+    color: rgba(139, 137, 137, 1);
     font-family: 'Lato', sans-serif;
-    font-size: 24px;
-    letter-spacing: 8px;
     padding-left: 2rem; 
 }
+
+.register-form {
+    font-family:  'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 10px;
+    color: rgba(139, 137, 137, 1);
+}
+
+.register-form-input {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.register-text-option {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(139, 137, 137, 1);
+}
+
+/* font-family: Inter;
+font-size: 16px;
+font-weight: 600;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: left; */
+

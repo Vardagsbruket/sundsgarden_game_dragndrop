@@ -4,26 +4,24 @@ import { ImageRegister } from "../components/Elements/ImageRegister";
 
 export const RegisterAccountPage = () => {
   return (
-    <div className="page-container">
-      <div className="register-container">
-        <div className="registerImage">
-          <ImageRegister />
-        </div>
+    <div className="register-page-container">
+      <div className="registerImage">
+        <ImageRegister />
       </div>
-      <div className="register-container">
+      <div className="register-form-container">
         <h1 className="register-title">IMAGINARIUM</h1>
         <form className="register-form">
           <div className="register-option1">
             <label>
               <input
                 type="radio"
-                name="react-tips"
+                name="register-options"
                 value="option1"
                 checked={true}
-                className="form-check-input"
+                className="register-form-input"
               />
-              <h3>Free game plan</h3> 
-              <ul>
+              <span className="register-text-option">Free game plan</span>
+              <ul className="register-option-list">
                 <li>Unlimited access to one world</li>
               </ul>
             </label>
@@ -32,12 +30,12 @@ export const RegisterAccountPage = () => {
             <label>
               <input
                 type="radio"
-                name="react-tips"
+                name="register-radio-options"
                 value="option2"
-                className="form-check-input"
+                className="register-form-input"
               />
-              <h3>Premium game plan</h3>
-              <ul>
+              <span className="register-text-option">Premium game plan</span>
+              <ul className="register-option-list">
                 <li>Unlock more worlds</li>
                 <li>Choose colour-theme</li>
                 <li>Access more building blocks</li>
