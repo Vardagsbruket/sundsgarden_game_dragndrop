@@ -4,9 +4,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
+
 //  TODO:
 //  1. Add correct navigation to profile page after register - private route.
-//  2. add error page??
+//  2. add error page - add anything to catch (error)?
   
 
 const Register = () => { 
@@ -32,13 +33,13 @@ const Register = () => {
           } else {          // else - create newUser
             const newUser = { username, email, password: password1 };
               axios.post("http://localhost:6001/users", newUser)  
-              .then(() => alert("User created!"));                
-              navigate("/"); // ==== ADD CORRECT ROUTE HERE ===  
+              .then(() => alert("User created! Login to play!"));                
+              navigate("/");  
           } 
 
           }
           catch (error) {
-            console.log(error); // ==== DO I NEED TO ADD ANYTHING HERE? ===  
+            console.log(error);
           }
         }
         else { 
@@ -85,8 +86,8 @@ const Register = () => {
             onChange={(e) => setPassword2(e.target.value)}
           />
         </label>
-        <button className="btn" type="submit" onClick={handleSubmit}>
-          <p>Register Account</p>
+        <button className="register-btn" type="submit" onClick={handleSubmit}>
+          <p>Create Account</p>
         </button> 
       </form>
     </div>

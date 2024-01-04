@@ -67,5 +67,25 @@
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
-
 }
+
+.register-btn {
+    background-color:rgba(36, 99, 235, 1);
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+    font-weight: 600;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.register-btn:hover {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+  }
