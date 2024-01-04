@@ -33,7 +33,7 @@ export const DnDone = ({ id }) => {
       <div
         {...bindElementPos()}
         style={{
-          position: "relative",
+          position: "absolute",
           top: elementPos.y,
           left: elementPos.x,
           touchAction: "none",
