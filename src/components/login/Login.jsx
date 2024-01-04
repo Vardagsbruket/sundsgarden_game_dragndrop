@@ -2,7 +2,7 @@ import { useState } from "react"; // uses the useState hook to add a variable to
 import { NavLink, useNavigate, useParams } from "react-router-dom"; //to allow users to access different components
 import "./Login.css";
 import axios from "axios";
-import { useAuth } from "./AuthProvider";
+import { useAuth } from "../AuthProvider";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -61,9 +61,9 @@ const Login = () => {
     alert(`Hi ${user.username}`);
     navigate(`/game/${user.id}`); //  access to the user's game page after login
 
-    localStorage.setItem("user", JSON.stringify(user.id));
-    localStorage.setItem("userName", JSON.stringify(user.username)); //I've put an extra line of code in here to catch the username/Saskia
-    localStorage.setItem("userEmail", JSON.stringify(user.email)); //Same for the email adress
+    // localStorage.setItem("user", JSON.stringify(user.id));
+    // localStorage.setItem("userName", JSON.stringify(user.username)); //I've put an extra line of code in here to catch the username/Saskia
+    // localStorage.setItem("userEmail", JSON.stringify(user.email)); //Same for the email adress
     resetForm();
   };
 
