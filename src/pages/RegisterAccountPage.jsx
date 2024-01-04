@@ -8,14 +8,14 @@ export const RegisterAccountPage = () => {
       <div className="registerImage">
         <ImageRegister />
       </div>
-      <div className="register-form-container">
+      <div className="register-container">
         <h1 className="register-title">IMAGINARIUM</h1>
         <form className="register-form">
           <div className="register-option1">
             <label>
               <input
                 type="radio"
-                name="register-options"
+                name="register-radio-options"
                 value="option1"
                 checked={true}
                 className="register-form-input"

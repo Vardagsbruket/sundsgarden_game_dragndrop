@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
+import "../Button.css";
 
 
 //  TODO:
@@ -86,7 +87,7 @@ const Register = () => {
             onChange={(e) => setPassword2(e.target.value)}
           />
         </label>
-        <button className="register-btn" type="submit" onClick={handleSubmit}>
+        <button className="btn" type="submit" onClick={handleSubmit}>
           <p>Create Account</p>
         </button> 
       </form>
