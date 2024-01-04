@@ -33,7 +33,7 @@ export const DnDtwo = ({ id }) => {
       <div
         {...bindElementPos()}
         style={{
-          position: "absolute",
+          position: "relative",
           top: elementPos.y,
           left: elementPos.x,
           touchAction: "none",
