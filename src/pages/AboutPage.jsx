@@ -1,18 +1,10 @@
-
+import "./AboutPage.css";
 
 export const AboutPage = () => {
   return (
-    <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center"
-    }}>
-      <h2>About this game</h2>
-      <div
-        style={{
-        width: "25rem"
-        }}>
+    <div className="about-page-container">
+      <h1 className="about-title">About this game</h1>
+      <div className="about-text">
           <p>        
             Imaginarium is not a game in the conventional sense; 
             you can't win and you don't get a score!
@@ -26,7 +18,7 @@ export const AboutPage = () => {
             This game is built as part of our course in JavaScript from Sundsgården in the winter of 2023.
             Click on the names in the footer to check out the creators GitHub accounts.
           </p>
-          </div>
       </div>
+    </div>
   );
 };
