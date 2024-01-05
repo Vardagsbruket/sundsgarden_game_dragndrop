@@ -4,7 +4,7 @@ import ProfilePhoto from "../Images/ProfilePhoto.png";
 import { useAuth } from "../../reducers/AuthProvider";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "../button.css";
+
 
 export const Header = () => {
   const { state, dispatch } = useAuth();
@@ -47,9 +47,9 @@ export const Header = () => {
       <div className="navBar">
         <NavLink to={`/game/${userId}`}>Play</NavLink>
         <NavLink to="/about">About</NavLink>
-        <button className="btn"><NavLink to="/" onClick={handleLogOut}>
+        <NavLink className="btn" to="/" onClick={handleLogOut}>
           Log Out
-        </NavLink></button>
+        </NavLink>
         {/* Add function to log out */}
         <NavLink to={`/profile/${userId}`}>
           <img src={ProfilePhoto} alt="Profile Picture" />
