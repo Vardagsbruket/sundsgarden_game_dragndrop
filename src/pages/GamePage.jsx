@@ -33,7 +33,7 @@ export const GamePage = () => {
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           flexDirection: "row",
           alignItems: "baseline",
           marginLeft: "5rem",
