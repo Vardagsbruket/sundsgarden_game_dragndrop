@@ -1,14 +1,9 @@
-// ==== REGISTER ACCOUNT ====
+// ==== REGISTER ACCOUNT / CREATE ACCOUNT ====
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
 import "../Button.css";
-
-
-//  TODO:
-//  1. Add correct navigation to profile page after register - private route.
-//  2. add error page - add anything to catch (error)?
   
 
 const Register = () => { 
@@ -29,18 +24,17 @@ const Register = () => {
             const users = response.data     //list of users (json) = response.data
             const user = users.find((user) => user.email === email | user.username === username); // check if email and/or username already exists
             
-          if (user) {       // if - there is a matching user alert
+          if (user) {       // if - there is a matching user, alert..
             alert("Username or email already exists. Please try again!");
-          } else {          // else - create newUser
+          } else {          // else - create newUser and alert..
             const newUser = { username, email, password: password1 };
               axios.post("http://localhost:6001/users", newUser)  
               .then(() => alert("User created! Login to play!"));                
               navigate("/");  
           } 
-
           }
           catch (error) {
-            console.log(error);
+            console.error("Oops, something went wrong:", error);
           }
         }
         else { 
