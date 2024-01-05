@@ -29,6 +29,7 @@ export const GamePage = () => {
 
   return (
     <>
+        <Instructions />
       <div
         style={{
           display: "flex",
@@ -49,8 +50,7 @@ export const GamePage = () => {
         <DnDsix id="element6" resetStatus={resetStatus} />
         <DnDseven id="element7" resetStatus={resetStatus} />
       </div>
-      <Instructions />
-      <button onClick={handleReset}>Reset Game</button>
+      
       <div
         className="playArea"
         style={{
@@ -58,6 +58,7 @@ export const GamePage = () => {
           backgroundColor: "#edecec",
         }}
       ></div>
+      <button onClick={handleReset}>Reset Game</button>
     </>
   );
 };
