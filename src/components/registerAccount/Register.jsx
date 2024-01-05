@@ -3,7 +3,6 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
-import "../Button.css";
 
 //  TODO:
 //  1. Add correct navigation to profile page after register - private route.
